@@ -1198,3 +1198,136 @@ html, body, #root {
     grid-template-columns: 1fr; /* Single column on mobile */
   }
 }
+
+/* ==========================================================================
+   Accessibility helpers
+   ========================================================================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid #666;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Select controls (duration, aspect ratio, resolution)
+   ========================================================================== */
+.setting-select {
+  background-color: #1a1a1a;
+  color: var(--text-primary);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.setting-select:hover {
+  border-color: #555;
+}
+
+/* ==========================================================================
+   Media badges on the uploaded source frames
+   ========================================================================== */
+.media-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  z-index: 5;
+}
+
+/* ==========================================================================
+   Error banner with a dismiss button
+   ========================================================================== */
+.error-banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.error-dismiss {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+/* ==========================================================================
+   Library cards are buttons, so they need an explicit reset
+   ========================================================================== */
+.history-card {
+  position: relative;
+}
+
+.history-open {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.history-remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.library-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.library-actions .btn-text {
+  width: auto;
+}
+
+/* ==========================================================================
+   Notes inside modals
+   ========================================================================== */
+.modal-note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.auth-footer a {
+  color: #fff;
+}
