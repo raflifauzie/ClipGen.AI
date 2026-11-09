@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Environment files (never commit API keys)
+.env
+.env.*
+!.env.example
+
+# Tooling caches
+coverage
+.eslintcache
+.vite
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
